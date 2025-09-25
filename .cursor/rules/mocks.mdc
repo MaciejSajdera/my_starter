@@ -1,0 +1,15 @@
+---
+description: When user wants to mock a request
+globs: 
+alwaysApply: false
+---
+# Mocks guidelines
+
+**Description:** 
+Use always when requested to create mocks. Mocks should only be created inside `src/init/msw/handlers/index.ts` file. 
+
+!!! Check the example file to see how to implement the mocks - `src/init/msw/handlers/examples.ts` !!!
+
+- Always check examples from `src/init/msw/handlers/examples.ts` file and create similar code. Remember to use `http` and `apiBaseUrlConnect` 
+- We are using https://mswjs.io/ for creating our mocks.
+- Do not create any additional files! All the mocks should be created in `src/init/msw/handlers/index.ts` file
