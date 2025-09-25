@@ -1,6 +1,6 @@
 {
-  "short_name": "Breakify",
-  "name": "App for breaking softwaredevelopment tasks into small manageable chunks",
+  "short_name": "Starter",
+  "name": "Starter Project Template",
   "icons": [
     {
       "src": "favicon.ico",

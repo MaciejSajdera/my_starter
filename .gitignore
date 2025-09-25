@@ -34,3 +34,5 @@ dist-ssr
 
 # vite build private artifacts (e.g., visualization.html)
 /.vite/
+
+.cursor/*

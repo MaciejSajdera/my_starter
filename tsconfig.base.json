@@ -15,7 +15,6 @@
     "moduleDetection": "force",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "noEmit": true,
     "allowImportingTsExtensions": false,
     "jsx": "react-jsx",
 
