@@ -12,6 +12,7 @@
     "format:check": "biome format .",
     "lint:biome": "biome lint .",
     "lint:biome:fix": "biome lint --write .",
+    "tsc": "tsc",
     "check": "biome check --write ."
   },
   "dependencies": {
