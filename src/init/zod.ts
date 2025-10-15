@@ -1,7 +1,7 @@
 import get from "lodash/get";
-import { isReallyNaN } from "utils/number";
-import { ValidationMessage } from "utils/schemas";
 import { z } from "zod";
+import { isReallyNaN } from "@/utils/number";
+import { ValidationMessage } from "@/utils/schemas";
 
 // ERROR MAP
 

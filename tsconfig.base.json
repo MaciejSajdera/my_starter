@@ -30,9 +30,9 @@
     "erasableSyntaxOnly": true,
 
     /* Paths */
-    "baseUrl": "./src",
+    "baseUrl": ".",
     "paths": {
-      "*": ["*"] // e.g., "components/*" to "src/components/*"
+      "@/*": ["./src/*"]
     }
   }
 }
