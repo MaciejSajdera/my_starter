@@ -1,4 +1,4 @@
-import { bypass, HttpResponse, http, type RequestHandler } from "msw";
+import { HttpResponse, http, type RequestHandler } from "msw";
 import { apiBaseUrlConnect } from "@/api/connect/url";
 
 /**
