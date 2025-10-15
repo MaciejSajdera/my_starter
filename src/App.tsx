@@ -1,6 +1,6 @@
 import React from "react";
-import { HealthCard } from "@/components/health/card";
 import Suspenser from "@/components/loading/suspenser";
+import { HealthCard } from "@/features/health/card";
 import "./App.css";
 import "./init";
 
