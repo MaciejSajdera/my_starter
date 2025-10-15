@@ -1,33 +1,46 @@
-import { useState } from "react";
-import viteLogo from "/vite.svg";
-import reactLogo from "./assets/react.svg";
+import React from "react";
+import { host } from "./api/connect/url";
 import "./App.css";
 
 function App() {
-  const [count, setCount] = useState(0);
+  const [hostResponse, setHostResponse] = React.useState<string | null>(null);
+  const [isLoading, setIsLoading] = React.useState(false);
+
+  const callHost = async () => {
+    setIsLoading(true);
+    try {
+      const response = await fetch(`${host}/health`);
+      const data = await response.text();
+      setHostResponse(data);
+    } catch (error) {
+      throw new Error(
+        `Error: ${error instanceof Error ? error.message : "Unknown error"}`
+      );
+    } finally {
+      setIsLoading(false);
+    }
+  };
 
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
       <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
+        <h3>Host Connection Test</h3>
+
         <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
+          Host URL: <code>{host}</code>
         </p>
+
+        <button onClick={callHost} disabled={isLoading}>
+          {isLoading ? "Calling Host..." : "Call Host"}
+        </button>
+
+        {hostResponse && (
+          <div>
+            <strong>Response:</strong>
+            <pre>{hostResponse}</pre>
+          </div>
+        )}
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </>
   );
 }

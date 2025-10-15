@@ -36,3 +36,6 @@ dist-ssr
 /.vite/
 
 .cursor/*
+
+# Local Netlify folder
+.netlify
